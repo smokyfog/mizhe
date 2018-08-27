@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>米折-登录</title>
+    <link rel="stylesheet" href="css/public.min.css">
+    <link rel="stylesheet" type="text/css" href="css/login.min.css"/>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/djs.js"></script>
+	<script type="text/javascript" src="js/login.min.js"></script>
+	<script src="js/index.min.js"></script>
+	
+</head>
+<body>
+	<!-- top开始 -->
+	<div id="top">
+		<div class="top_con clear_fix">
+			<div class="top_l">
+				<div class="notlogin">
+					<div class="top_q">
+						<a href="javascript:;" class="top_qq1">QQ登录</a>
+					</div>
+					<div class="top_tk">
+						<div class="top_tk_t">
+							<a href="javascript:;" class="top_qq1">QQ登录</a>
+						</div>
+						<div class="top_tk_c">
+							<a href="javascript:;" class="top_qq1">淘宝登录</a>
+						</div>
+						<div class="top_tk_b">
+							<a href="javascript:;" class="top_qq1">微博登录</a>
+						</div>
+					</div>
+					<a class="top_login" >请登录</a>
+					<a class="top_zc" >免费注册</a>
+				</div>
+				<span class="welcome">
+					您好，
+					<a href="" class="user"></a>
+					<a href="" title="金牌会员" class="vip" hidefocus="true"></a>&nbsp;
+					<a  class="quit">退出</a>
+				</span>
+			</div>
+			<script type="text/javascript">
+				if($.cookie("user")){
+					$(".welcome .user").html($.cookie("user"))
+					$(".notlogin").css("display" , "none")
+					$(".welcome").css("display" , "inline-block")
+				}else{
+					$(".notlogin").css("display" , "inline-block")
+					$(".welcome").css("display" , "none")
+				}
+				$(".quit").click(function(){
+					$.cookie("user","",{expires : 0,path:"/"});
+					location.href = "login.html";
+				})
+			</script>
+			<div class="top_r">
+				<ul>
+					<li><a href="">我的米折</a></li>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">消息</a></li>
+					<li><a href="">帮助中心</a></li>
+					<li><a href="">联系客服</a></li>
+					<li><a href=""><img src="images/shouji3.jpg" class="top_r_sj" />手机米折</a></li>
+					<li class="top_r_last"><a href="javascript:;" class="top_last">关注</a>
+					<div class="top_r_gz">
+						<div class="top_gz_l">
+							<a href="" class="top_wx_a"><img src="images/qrcode_app.jpg" alt="" class="top_wx"></a>
+							<em>米折微信公众号<br>
+							mizhewang</em>
+						</div>
+						<div class="top_gz_r">
+							<a href=""><img src="images/weibo_icon.png" alt="" class="top_gz_wb"></a>
+							<em>官方微博</em>
+							<a href=""><img src="images/qqzone.png" alt=""></a>
+							<em>QQ空间</em>
+						</div>
+					</div>
+					</li>
+					<div></div>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<!-- logo开始 -->
+	<div id="logo">
+		<div class="logo_con clear_fix">
+			<div class="logo_l">
+				<a href="index.html">
+					<img src="images/new-logo.jpg" >
+				</a>
+			</div>
+			<div class="logo_r">
+				<img src="images/logo2.png" >
+			</div>
+			
+		</div>
+	</div>
+		
+	<!-- nav开始 -->
+	<div id="nav" class="clear_fix">
+		<div class="nav_con">
+			<ul class="nav_ul">
+				<li><a href="index.html" class="nav_select">首页</a></li>
+				<li><a href="">品牌特卖</a></li>
+				<li><a href="">限量购</a></li>
+				<li><a href="">手机客户端</a></li>
+				<li><a href="">贝贝网</a></li>
+				<li><a href="">育儿宝</a></li>
+			</ul>
+			<a href="#" class="nav_sj">商家中心</a>
+		</div>
+	</div>
+	
+<div id="box_bg">
+	<div class="box_top">
+		
+	</div>
+	<div id="box">
+		<form action="" method="post">
+			<div class="dl_l_main">
+				<h2>注册米折会员</h2>
+				<div class="dl_l_form">
+					<div class="dl_sj">
+						<span>手机/邮箱:</span>
+						<input type="text" name="" id="form_tel" value="" />
+					</div>
+					<div class="dl_mm">
+						<span>密码:</span>
+						<input type="password" name="" id="form_pwd" value="" />
+						<a href="">忘记密码？</a>
+					</div>
+					<div class="dl_rember">
+						<input type="checkbox" name="rember_me" id="rember_me" checked="true" />
+						<label for="rember_me">记住我（下次自动登录）</label>
+					</div>
+					<input type="button" name="" id="form_btn" value="登录" />
+				</div>
+			</div>
+			<div class="dl_r_main">
+				<p class="title">没有账号？</p>
+				<a href="register.html" class="msdl">马上注册</a>
+				<p>你也可以通过以下途径登录</p>
+				<ul>
+					<li><a href="" title="用QQ账号登录米折网">用QQ账号登陆</a></li>
+					<li><a href="" title="用新浪微博登录米折网">用新浪微博登陆</a></li>
+					<li><a href="" title="用淘宝账号登陆米折网">用淘宝账号登陆</a></li>
+				</ul>
+				<div class="dl_r_b">
+					<p>下载手机APP</p>
+					<a href=""><img src="images/login_appprom.png" alt="" /></a>	
+				</div>
+			</div>	
+				
+		</form>
+	</div>	
+</div>			
+	
+	<!--footer开始-->
+	<div id="footer">
+		<div class="footer_con clear_fix">
+			<ul class="footer_ul clear_fix">
+				<li><a href="">首页</a></li>
+				<li><a href="">关于米折</a></li>
+				<li><a href="">媒体报道</a></li>
+				<li><a href="">人才招聘</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">友情链接</a></li>
+				<li><a href="">商务合作</a></li>
+				<li><a href="">帮助中心</a></li>
+				<li><a href="">联系客服</a></li>
+				<li><a href="">手机客户端</a></li>
+				<li><a href="">网站地图</a></li>
+			</ul>
+			<div class="footer_hj clear_fix">
+			<a href=""><img src="images/j1.png"/></a>
+			<a href=""><img src="images/j2.png"/></a>
+			<a href=""><img src="images/j3.png"/></a>
+			<a href=""><img src="images/j4.png"/></a>
+			<a href=""><img src="images/j5.png"/></a>
+			</div>
+			
+			<p class="footer_dl">© 2011-2018 米折网 - 杭州互秀电子商务有限公司 旗下网站 - 浙ICP备12005806</p>
+			<div class="fooer_fx">
+				<span class="fooer_fx_more">分享米折网到：</span>
+				<a href="" title="分享到QQ好友" class="fx_qq"></a>
+				<a href="" title="分享到QQ空间" class="fx_qzone"></a>
+				<a href="" title="分享到新浪微博" class="fx_xlwb"></a>
+				<a href="" title="分享到腾讯微博" class="fx_txwb"></a>
+				<a href="" title="分享到人人网" class="fx_rrw"></a>
+				<a href="" title="分享到我的淘宝" class="fx_tb"></a>
+			</div>
+		</div>
+	
+	
+	</div>
+	<!--返回最上面-->
+	<div class="fhtop">
+		
+	</div>
+	
+		
+		
+	</body>
+	
+
+</body>
+</html>
+

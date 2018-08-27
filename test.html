@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="tel" id="tel" value="17864385969" />
+		<input type="text" name="pwd" id="pwd" value="p-123456" />
+		<input type="button" name="" id="btn" value="提交" />
+		<input type="button" name="cookie" id="cookie" value="显示cookie" />
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+	$("#btn").click(function(){
+		var tel = parseInt($("#tel").val());
+		var pwd = $("#pwd").val();
+		var yquserStr = $.cookie("yquser") ? $.cookie("yquser") : "";
+		var yquserObj = convertYquserStrToObj(yquserStr);
+		if(tel in yquserObj){
+			console.log("该手机号已经被注册")
+		}else{
+			yquserObj[tel] = pwd;
+		
+		yquserStr = convertObjToYquserStr(yquserObj);
+		$.cookie("yquser",yquserStr,{expires : 7,path:"/"});
+//		var date = new Date();
+//		date.setDate(date.getDate() + 7);
+//		document.cookie = "yquser=" + yquserStr + ";expires="+ date +";path="/"";
+		}
+	})
+	
+
+	
+	function convertYquserStrToObj(yquserStr){
+				//"sp1,香蕉,30,1,src1:sp2,苹果,40,2,src2:sp3,梨,50,3,str3"
+				//17834385969：p-123456,15854807672:qwerty
+				//如果是空字符串，即没有购物车信息，那么购物车为空，直接返回一个空对象
+				if(!yquserStr){
+					return {};
+				}
+				var goods = yquserStr.split(",");
+				var obj = {};
+				for(var i = 0; i < goods.length; i ++){
+					var data = goods[i].split(":");
+					//以商品的id为健，商品的其他信息为值，这个值也设计为一个对象
+					obj[data[0]] = data[1];
+				}
+				return obj;
+	}
+	
+	
+	
+	function convertObjToYquserStr(obj){
+		//17834385969：p-123456,15854807672:qwerty
+		var yquserStr = "";
+		for(var yquser in obj){
+			if(yquserStr){
+				yquserStr += ",";
+			}
+			yquserStr += yquser + ':' + obj[yquser];
+			
+			
+		}
+		return yquserStr;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>

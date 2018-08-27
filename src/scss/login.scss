@@ -1,0 +1,179 @@
+#footer{
+    margin: 0px !important;
+}
+html,body{
+    background: #fff !important;
+}
+#box_bg{
+    height: 480px;
+    background: #f1efeb;
+}
+.box_top{
+    height: 50px;
+}
+#box {
+    background: #fff;
+    padding-left: 80px;
+    width: 930px;
+    margin: 0 auto;
+    background:#fff ;
+}
+
+.dl_l_main{
+    width: 590px;
+    display: inline-block;
+    float: left;
+    h2{
+        font-size: 16px;
+        font-weight: bold;
+        color: #333333;
+        margin-top: 35px;
+        margin-bottom: 46px;
+    }
+    
+    .dl_sj,.dl_mm,.dl_rember{
+        min-height: 32px;
+        line-height: 3px;
+        margin: 18px 0;
+        span{
+            display: inline-block;
+            height: 32px;
+            line-height: 32px;
+            width: 70px;
+            text-align: right;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 12px;
+            color: #666;
+            padding-right: 5px;
+            
+        }
+        a{
+                color: #3e3e3e;
+                margin-left: 10px;
+                font-size: 1px;
+            }
+        input{
+            border: 1px solid #ddd;
+            height: 22px;
+            line-height: 22px;
+            margin-right: 3px;
+            padding: 3px;
+            border-radius: 2px 2px;
+            width: 220px;
+            background: url(../images/input_bg_sd.png) no-repeat scroll 0 0 #fff;
+        }
+        input:nth-of-type(2){
+            width: 220px;
+        }
+        
+    }
+    #rember_me{
+        height: 13px;
+        width: 13px;  
+    }
+    .dl_rember{
+            padding-left: 70px !important;
+    }
+    label{
+        font-size: 12px;
+        color: #666666;
+    }
+
+}
+
+
+#form_btn{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    color: #FFFFFF;
+    background: #ff6600;
+    border: 1px solid #f30;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 103px;
+    cursor: pointer;
+}
+
+.dl_r_main{
+    width: 220px;
+    padding-left: 40px;
+    text-align: center;
+    height: 400px;
+    display: inline-block;
+    background: url(../images/tj_split.png) no-repeat 15px 35px ;
+    .title{
+        font-size: 12px;
+        color: #333;
+        margin: 20px auto;
+    }
+    .msdl{
+          display: block;
+          width: 106px;
+          margin: 0 auto;
+          height: 28px;
+          border: 1px solid #538312;
+          color: #fff;
+          text-align: center;
+          font-weight: bold;
+          line-height: 28px;
+          border-radius: 5px;
+          margin-bottom: 50px;
+//        background: -webkit-gradient(linear,left top,left bottom,from(#7DB72F),to(#4E7D0E));
+          background: linear-gradient(to bottom,#7DB72F,#4E7D0E);
+    }
+    p:nth-of-type(2){
+        font-size: 1px;
+        text-align: center;
+        color: #777;
+    }
+    ul{
+        display: block;
+        width: 120px;
+        margin: 20px auto;
+        font-size: 12px;
+        li a{
+            display: block;
+            color: #666666;
+            height: 24px;
+            padding: 0 8px;
+            padding-left: 26px;
+            line-height: 24px;
+            margin: 5px auto;
+            border-radius: 5px;
+            background: url(../images/icons1.png) no-repeat ;
+            background-color: white;
+            border: 1px solid #ddd;
+            cursor: pointer;
+           
+        }
+        li:nth-of-type(1) a{
+             background-position: -15px -646px;
+        }
+        li:nth-of-type(2) a{
+             background-position: -15px -722px;
+        }
+        li:nth-of-type(3) a{
+             background-position: -15px -686px;
+        }
+    }
+    .dl_r_b{
+        margin-top: 50px;
+        color: #777777;
+        font-size: 12px;
+        img{
+            margin: 8px auto;
+        }
+    }
+    
+}
+#v_container,#verifyCanvas{
+    display: inline-block;
+    width: 115px;
+    height: 50px;
+    margin-bottom: -10px;
+    padding-left: 5px;
+}

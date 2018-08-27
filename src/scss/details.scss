@@ -1,0 +1,50 @@
+.detail_mete{width:1006px;margin: 0 auto;}
+#footer{
+    margin: 0px !important;
+}
+html,body{
+    background: #fff !important;
+}
+#box_bg{
+    background: #f1efeb;
+   
+}
+.box_top{
+    height: 50px;
+     p{
+        width: 1006px;
+        height: 50px;
+        font-size: 12px;
+        margin: 0 auto;
+        line-height: 50px;
+        a{
+            color: #999;
+        }
+    }
+}
+
+.detail_mete{
+    background: #FFFFFF;
+    min-height: 500px;
+    padding: 15px 0 30px 15px;
+    
+}
+.detail_mete_left{
+    width: 440px;
+    margin-right: 20px;
+    display: inline-block;
+    .mete_mt{
+        width: 440px;
+        height: 440px;
+        border: 1px solid #dfdfdf;
+    }
+    .mete_top{
+        margin-bottom: 20px;
+    }
+    .mete_bottom{
+        width: 440px;
+        height: 85px;
+        overflow: hidden;
+    }
+    
+}

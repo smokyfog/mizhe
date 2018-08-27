@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>米折-首页</title>
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/public.min.css">
+	<script src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/djs.js"></script>
+	<script src="js/index.min.js"></script>
+	
+</head>
+<body>
+	<!-- top开始 -->
+	<div id="top">
+		<div class="top_con clear_fix">
+			<div class="top_l">
+				<div class="notlogin">
+					<div class="top_q">
+						<a href="javascript:;" class="top_qq1">QQ登录</a>
+					</div>
+					<div class="top_tk">
+						<div class="top_tk_t">
+							<a href="javascript:;" class="top_qq1">QQ登录</a>
+						</div>
+						<div class="top_tk_c">
+							<a href="javascript:;" class="top_qq1">淘宝登录</a>
+						</div>
+						<div class="top_tk_b">
+							<a href="javascript:;" class="top_qq1">微博登录</a>
+						</div>
+					</div>
+					<a class="top_login" >请登录</a>
+					<a class="top_zc" >免费注册</a>
+				</div>
+				<span class="welcome">
+					您好，
+					<a href="" class="user"></a>
+					<a href="" title="金牌会员" class="vip" hidefocus="true"></a>&nbsp;
+					<a  class="quit">退出</a>
+				</span>
+			</div>
+			<script type="text/javascript">
+				if($.cookie("user")){
+					$(".welcome .user").html($.cookie("user"))
+					$(".notlogin").css("display" , "none")
+					$(".welcome").css("display" , "inline-block")
+				}else{
+					$(".notlogin").css("display" , "inline-block")
+					$(".welcome").css("display" , "none")
+				}
+				$(".quit").click(function(){
+					$.cookie("user","",{expires : 0,path:"/"});
+					location.href = "login.html";
+				})
+			</script>
+			<div class="top_r">
+				<ul>
+					<li><a href="">我的米折</a></li>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">消息</a></li>
+					<li><a href="">帮助中心</a></li>
+					<li><a href="">联系客服</a></li>
+					<li><a href=""><img src="images/shouji3.jpg" class="top_r_sj" />手机米折</a></li>
+					<li class="top_r_last"><a href="javascript:;" class="top_last">关注</a>
+					<div class="top_r_gz">
+						<div class="top_gz_l">
+							<a href="" class="top_wx_a"><img src="images/qrcode_app.jpg" alt="" class="top_wx"></a>
+							<em>米折微信公众号<br>
+							mizhewang</em>
+						</div>
+						<div class="top_gz_r">
+							<a href=""><img src="images/weibo_icon.png" alt="" class="top_gz_wb"></a>
+							<em>官方微博</em>
+							<a href=""><img src="images/qqzone.png" alt=""></a>
+							<em>QQ空间</em>
+						</div>
+					</div>
+					</li>
+					<div></div>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<!-- logo开始 -->
+	<div id="logo">
+		<div class="logo_con clear_fix">
+			<div class="logo_l">
+				<a href="index.html">
+					<img src="images/new-logo.jpg" >
+				</a>
+			</div>
+			<div class="logo_r">
+				<img src="images/logo2.png" >
+			</div>
+			
+		</div>
+	</div>
+		
+	<!-- nav开始 -->
+	<div id="nav" class="clear_fix">
+		<div class="nav_con">
+			<ul class="nav_ul">
+				<li><a href="index.html" class="nav_select">首页</a></li>
+				<li><a href="">品牌特卖</a></li>
+				<li><a href="">限量购</a></li>
+				<li><a href="">手机客户端</a></li>
+				<li><a href="">贝贝网</a></li>
+				<li><a href="">育儿宝</a></li>
+			</ul>
+			<a href="#" class="nav_sj">商家中心</a>
+		</div>
+	</div>
+	
+		
+	<div id="box">
+		<!-- banner开始 -->
+		<div class="side_con">
+					<div class="side_top1">
+						<img src="images/site_top0526.jpg" alt="" />
+					</div>
+					<div class="side_top">每日九点更新</div>
+					<ul class="side_ul">
+						<li><a href="index.html" id="xuanzhong">全部</a></li>
+						<li><a href="list.html">女装</a></li>
+						<li><a href="">居家</a></li>
+						<li><a href="">母婴</a></li>
+						<li><a href="">鞋包</a></li>
+						<li><a href="">配饰</a></li>
+						<li><a href="">美妆</a></li>
+						<li><a href="">热卖</a></li>
+					</ul>
+					<ul class="side_hd clear_fix" >
+						<li><a href="">10元购</a></li>
+						<li><a href="">品牌特卖</a></li>
+						<li><a href="">限量购</a></li>
+						<li><a href="">9.9包邮</a></li>
+					</ul>
+					<div class="side_hb">
+						APP送红包
+						<a href="">
+							<div class="side_app">
+								<p>安装APP<em>送红包</em></p>
+								<img src="images/qrcode_down.jpg"/>
+							</div>
+						</a>
+					</div>
+				</div>
+		
+		<div class="banner_con clear_fix">
+			<div class="banner_l">
+				
+				
+				<div class="banner_l_l">
+					<a href="">
+						<img src="images/banner.jpg" >
+					</a>
+				</div>
+				<div class="banner_l_r">
+					<div class="banner_l_t">
+						<a href="">
+							<img src="images/case1.jpg" >
+						</a>
+					</div>
+					<div class="banner_l_b">
+						<a href="">
+							<img src="images/case2.jpg" >
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="banner_r">
+				<div class="banner_r_t">
+					<div class="banner_btn1">
+						立即注册
+					</div>
+					<p class="banner_p1">
+						已有账号，马上<a href="login.html">登录</a>
+					</p>
+				</div>
+				<div class="banner_r_t2">
+					<div class="banner_btn2">
+						我的米折
+					</div>
+					<div class="banner_btn3">
+						签到送米币
+					</div>
+				</div>
+				<script type="text/javascript">
+				if($.cookie("user")){
+					$(".banner_r_t").css("display" , "none")
+					$(".banner_r_t2").css("display" , "inline-block")
+				}else{
+					$(".banner_r_t").css("display" , "inline-block")
+					$(".banner_r_t2").css("display" , "none")
+				}
+				</script>
+				<ul class="banner_r_b">
+					<li class="banner_fir">
+					<a href="">
+						<h1>一折起包邮</h1>
+						<p>Free shipping</p>	
+					</a>
+					</li>
+					<li class="banner_sec">
+						<a href="">
+							<h1>专业买手砍价</h3>
+							<p>Hard bargain</p>
+						</a>
+					</li>
+					<li class="banner_thr">
+						<a href="">
+							<h1>商品人工质检</h3>
+							<p>Quality inspection</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		<!-- show开始 -->
+		<div class="show_con">
+			<div class="show_k">
+				<dl class="show_cp">
+					<a href="">
+						<div class="show_top">
+							<p>女装</p>
+							<p>Top</p>
+						</div>
+					</a>
+					
+					<dt><a href=""><img src="images/show1.jpg" ></a></dt>
+					<dd>
+						<a href="">
+							<span class="show_sb">
+								<span class="show_sc">￥</span>
+								21.
+								<span class="show_sm">90</span>
+							</span>
+							<span class="show_dz">
+								&nbsp;&nbsp;3.9折包邮
+							</span>
+						</a>
+						
+					</dd>
+				</dl>
+				<dl class="show_cp">
+					<a href="">
+						<div class="show_top">
+							<p>鞋包</p>
+							<p>Top</p>
+						</div>
+					</a>
+					<dt><a href=""><img src="images/show2.jpg" ></a></dt>
+					<dd>
+						<a href="">
+							<span class="show_sb">
+								<span class="show_sc">￥</span>
+								9.
+								<span class="show_sm">90</span>
+							</span>
+							<span class="show_dz">
+								&nbsp;&nbsp;0.4折包邮
+							</span>
+						</a>
+					</dd>
+				</dl>
+				<dl class="show_cp">
+					<a href="">
+						<div class="show_top">
+							<p>居家</p>
+							<p>Top</p>
+						</div>
+					</a>
+					<dt><a href=""><img src="images/show3.jpg" ></a></dt>
+					<dd>
+						<a href="">
+							<span class="show_sb">
+								<span class="show_sc">￥</span>
+								9.
+								<span class="show_sm">90</span>
+							</span>
+							<span class="show_dz">
+								&nbsp;&nbsp;1折包邮
+							</span>
+						</a>
+					</dd>
+				</dl>
+				<dl class="show_cp">
+					<a href="">
+						<div class="show_top">
+							<p>母婴</p>
+							<p>Top</p>
+					</div>
+					</a>
+					
+					<dt><a href=""><img src="images/show4.jpg" ></a></dt>
+					<dd>
+						<a href="">
+							<span class="show_sb">
+								<span class="show_sc">￥</span>
+								25.
+								<span class="show_sm">90</span>
+							</span>
+							<span class="show_dz">
+								&nbsp;&nbsp;4.3折包邮
+							</span>
+						</a>
+					</dd>
+				</dl>
+				<dl class="show_cp">
+					<a href="">
+						<div class="show_top">
+							<p>美食</p>
+							<p>Top</p>
+					</div>
+					</a>
+					<dt><a href=""><img src="images/show5.jpg" ></a></dt>
+					<dd>
+						<a href="">
+							<span class="show_sb">
+								<span class="show_sc">￥</span>
+								24.
+								<span class="show_sm">90</span>
+							</span>
+							<span class="show_dz">
+								&nbsp;&nbsp;4.2折包邮
+							</span>
+						</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<!--goods开始-->
+		<div class="goods_con">
+			<div class="goods_top">
+				<span class="goods_top_l">
+					今日特卖
+					<span>/</span>
+				</span>
+				<span class="goods_sy">本场剩余:</span>
+				<p style="display: none;" >发布时间为<span id="atime01">9:00</span></p>
+				<span id="timeOver01">00:00:00</span>
+			</div>
+			<div class="goods_sp">
+				<ul class="goods_nav">
+					<li><a href="index.html">全部</a></li>
+					<li><a href="list.html">女装</a></li>
+					<li><a href="">居家</a></li>
+					<li><a href="">母婴</a></li>
+					<li><a href="">鞋包</a></li>
+					<li><a href="">配饰</a></li>
+					<li><a href="">美妆</a></li>
+					<li><a href="">热卖排行</a></li>
+					<li><a href="" class="goods_bh">9.9包邮 </a></li>
+					<li><a href="" class="goods_bh">明日精选</a></li>
+				</ul>
+				<div class="goods_hdt">
+					<div class="goods_hk">
+						
+					</div>
+				</div>
+				<div class="goods_show">
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q1.jpg"/>
+									<div class="goods_zz">
+										健美创研 经典女士淡香水4件套
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>19<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">0.7折</span>
+										<span class="goods_jg">￥238</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q2.jpg"/>
+									<div class="goods_zz">
+										davebella戴维贝拉秋冬季男女童连帽外套 宝宝外套DB5975             
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q3.jpg"/>
+									<div class="goods_zz">
+										davebella戴维贝拉春秋季新款男女宝宝雪尼尔外套 婴儿糖果系外套139-A 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q4.jpg"/>
+									<div class="goods_zz">
+										 咯咯小猪女童夏季韩版公主凉鞋儿童鞋 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q5.jpg"/>
+									<div class="goods_zz">
+										 【50贴】【2017火爆产品养生去湿气足贴祛湿睡眠通便正品脚底贴/】
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q6.jpg"/>
+									<div class="goods_zz">
+										 雪芙特时尚百搭增高显瘦舒适透气仙女运动单鞋 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q7.jpg"/>
+									<div class="goods_zz">
+										【买二赠一】仟雅居厨房油污清洁剂灶台净油烟油烟机重油油污净强力去油污400ml
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q8.jpg"/>
+									<div class="goods_zz">
+										 儿童唐装男童中国风夏款新款棉麻复古中式汉服两件套宝宝复古衣服 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q9.jpg"/>
+									<div class="goods_zz">
+										 诗米克女童秋款牛仔裤宝宝绣花裤子儿童甜美碎花长裤 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q10.jpg"/>
+									<div class="goods_zz">
+										  反季促销新款儿童羽绒棉服女童加厚款中小童装宝宝秋冬棉袄衣服 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q11.jpg"/>
+									<div class="goods_zz">
+										 舒贝怡 儿童秋冬保暖马甲宝宝夹棉加厚背心卡通防风无袖外出服 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q12.jpg"/>
+									<div class="goods_zz">
+										维达抽纸20包整箱3层纸婴儿家用软抽面巾纸卫生纸抽 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q13.jpg"/>
+									<div class="goods_zz">
+										 【整箱30包】芳昕草 原木浆金装臻品原木抽纸巾拼好货3层餐巾纸 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q14.jpg"/>
+									<div class="goods_zz">
+										品位丹妮小白鞋女秋季2018新款百搭韩版厚底增高运动休闲板鞋女透白色鞋子
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q15.jpg"/>
+									<div class="goods_zz">
+										【40卷5.6斤4提装】品萱纸巾无芯卷纸家用卫生纸厕纸 原生木浆
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q16.jpg"/>
+									<div class="goods_zz">
+										  【清凉夏换新季 纯棉舒适呵护宝宝肌肤】【新品特价】慧莎4条装卡通女童内裤儿童短裤 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q17.jpg"/>
+									<div class="goods_zz">
+										淘气麦兜2018新款春秋季新生儿宝宝衣服0-3岁秋款婴幼儿巨星服连体衣  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q18.jpg"/>
+									<div class="goods_zz">
+										皇冠婴宝 婴儿纯棉内衣肩扣套装纯棉长袖秋衣裤宝宝圆领睡衣家居服 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q19.jpg"/>
+									<div class="goods_zz">
+										 简易衣柜钢管加粗加固布衣柜布艺简约现代经济型组装衣橱收纳柜子  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q20.jpg"/>
+									<div class="goods_zz">
+										 樱瑞 【7液2器】樱瑞电热蚊香液补充装 儿童宝宝无味无香型驱蚊 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q21.jpg"/>
+									<div class="goods_zz">
+										 【加密帐纱】【加高1.7m米】三开门防蚊蒙古包蚊帐加高有底防蚊帐布1.51.8m
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q22.jpg"/>
+									<div class="goods_zz">
+										 长袖连衣裙中长款2018秋装新款女装修身显瘦气质收腰遮肚子长裙潮   
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q23.jpg"/>
+									<div class="goods_zz">
+										【三件套装负离子花洒】弘恒达韩式淋浴喷头 手持节水增压卫浴 花洒套装
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q24.jpg"/>
+									<div class="goods_zz">
+										【床单+枕套一对！】俞兆林【床单三件套】活性印染不褪色不起球韩式公主风床单床裙 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q25.jpg"/>
+									<div class="goods_zz">
+										【皮薄肉多 白心大果】越南进口白心火龙果5斤4-7个 新鲜水果  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q26.jpg"/>
+									<div class="goods_zz">
+										女童套装2018秋季新款中大童6女孩子7时尚8秋装9女宝宝10韩版棒球服两件套潮  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q27.jpg"/>
+									<div class="goods_zz">
+										 伊利核桃乳240ml*16罐植物蛋白饮料【19.6月到期】
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q28.jpg"/>
+									<div class="goods_zz">
+										【2种款式可选】泰蜜熊卡通可爱夏季儿童男女宝宝凉拖鞋防滑舒适儿童宝宝洞洞鞋  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q29.jpg"/>
+									<div class="goods_zz">
+										【领券立减10元】南极人婴儿睡袋儿童防踢被分腿空气棉薄款夏季空调新生儿宝宝睡袋  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q30.jpg"/>
+									<div class="goods_zz">
+										维达婴儿软抽3层100抽/包 宝宝新生儿专用原木面巾纸买六包多赠1包 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q31.jpg"/>
+									<div class="goods_zz">
+										巴拉巴拉婴儿秋装衣服新生儿连体衣男宝宝哈衣包屁衣休闲纯棉长袖 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q32.jpg"/>
+									<div class="goods_zz">
+										 贝拉纽曼秋季女童皮鞋花朵豆豆鞋圆头宝宝公主鞋软底儿童单鞋  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q33.jpg"/>
+									<div class="goods_zz">
+										热销10w支】买2送5 防水防汗不晕染自动旋转双头眉笔不脱色持久自然一字眉初学者  
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q34.jpg"/>
+									<div class="goods_zz">
+										【2包特卖】日本颈椎贴久光贴膏腰间盘突疼痛贴热敷腰痛穴位贴腰疼久光膏药7片装
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q35.jpg"/>
+									<div class="goods_zz">
+										  2018新款韩版小熊印花童装纯棉儿童两件套装    
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q36.jpg"/>
+									<div class="goods_zz">
+										  朗宝尼尔【2条装】宝宝罩衣防水反穿衣长袖 婴儿童吃饭衣围裙护衣小孩围兜春秋冬 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q37.jpg"/>
+									<div class="goods_zz">
+										 秋装新款毛衣外套女宽松慵懒风开衫春秋小清新长袖加厚韩版针织衫 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q38.jpg"/>
+									<div class="goods_zz">
+										5双装儿童袜子春夏秋季薄款网眼袜棉袜纯网眼透气棉0-12岁短筒
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q39.jpg"/>
+									<div class="goods_zz">
+										万年利绞菜碎肉机饺子馅搅拌搅蒜泥家用手动多功能切菜碎菜机
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q40.jpg"/>
+									<div class="goods_zz">
+										【买一送一】子初 孕妇护肤品 安肤隔离霜30ml*2支 隔离霜妈妈防辐射保湿 
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>49<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">2.5折</span>
+										<span class="goods_jg">￥159</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					
+					
+					
+					
+					
+				</div>	
+			</div>
+		</div>
+	</div>	
+		
+	
+	<!--footer开始-->
+	<div id="footer">
+		<div class="footer_con clear_fix">
+			<ul class="footer_ul clear_fix">
+				<li><a href="">首页</a></li>
+				<li><a href="">关于米折</a></li>
+				<li><a href="">媒体报道</a></li>
+				<li><a href="">人才招聘</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">友情链接</a></li>
+				<li><a href="">商务合作</a></li>
+				<li><a href="">帮助中心</a></li>
+				<li><a href="">联系客服</a></li>
+				<li><a href="">手机客户端</a></li>
+				<li><a href="">网站地图</a></li>
+			</ul>
+			<div class="footer_hj clear_fix">
+			<a href=""><img src="images/j1.png"/></a>
+			<a href=""><img src="images/j2.png"/></a>
+			<a href=""><img src="images/j3.png"/></a>
+			<a href=""><img src="images/j4.png"/></a>
+			<a href=""><img src="images/j5.png"/></a>
+			</div>
+			
+			<p class="footer_dl">© 2011-2018 米折网 - 杭州互秀电子商务有限公司 旗下网站 - 浙ICP备12005806</p>
+			<div class="fooer_fx">
+				<span class="fooer_fx_more">分享米折网到：</span>
+				<a href="" title="分享到QQ好友" class="fx_qq"></a>
+				<a href="" title="分享到QQ空间" class="fx_qzone"></a>
+				<a href="" title="分享到新浪微博" class="fx_xlwb"></a>
+				<a href="" title="分享到腾讯微博" class="fx_txwb"></a>
+				<a href="" title="分享到人人网" class="fx_rrw"></a>
+				<a href="" title="分享到我的淘宝" class="fx_tb"></a>
+			</div>
+		</div>
+	
+	
+	</div>
+	<!--返回最上面-->
+	<div class="fhtop">
+		
+	</div>
+	
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>米折-女装</title>
+    <link rel="stylesheet" href="css/list.min.css">
+    <link rel="stylesheet" href="css/public.min.css">
+	<script src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script src="js/index.min.js"></script>
+	<script type="text/javascript" src="js/djs.js"></script>
+	<script src="js/index.min.js"></script>
+	<script type="text/javascript" src="js/list.min.js"></script>
+
+</head>
+<body>
+	<!-- top开始 -->
+	<div id="top">
+		<div class="top_con clear_fix">
+			<div class="top_l">
+				<div class="notlogin">
+					<div class="top_q">
+						<a href="javascript:;" class="top_qq1">QQ登录</a>
+					</div>
+					<div class="top_tk">
+						<div class="top_tk_t">
+							<a href="javascript:;" class="top_qq1">QQ登录</a>
+						</div>
+						<div class="top_tk_c">
+							<a href="javascript:;" class="top_qq1">淘宝登录</a>
+						</div>
+						<div class="top_tk_b">
+							<a href="javascript:;" class="top_qq1">微博登录</a>
+						</div>
+					</div>
+					<a class="top_login" >请登录</a>
+					<a class="top_zc" >免费注册</a>
+				</div>
+				<span class="welcome">
+					您好，
+					<a href="" class="user"></a>
+					<a href="" title="金牌会员" class="vip" hidefocus="true"></a>&nbsp;
+					<a  class="quit">退出</a>
+				</span>
+			</div>
+			<script type="text/javascript">
+				if($.cookie("user")){
+					$(".welcome .user").html($.cookie("user"))
+					$(".notlogin").css("display" , "none")
+					$(".welcome").css("display" , "inline-block")
+				}else{
+					$(".notlogin").css("display" , "inline-block")
+					$(".welcome").css("display" , "none")
+				}
+				$(".quit").click(function(){
+					$.cookie("user","",{expires : 0,path:"/"});
+					location.href = "login.html";
+				})
+			</script>
+			<div class="top_r">
+				<ul>
+					<li><a href="">我的米折</a></li>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">消息</a></li>
+					<li><a href="">帮助中心</a></li>
+					<li><a href="">联系客服</a></li>
+					<li><a href=""><img src="images/shouji3.jpg" class="top_r_sj" />手机米折</a></li>
+					<li class="top_r_last"><a href="javascript:;" class="top_last">关注</a>
+					<div class="top_r_gz">
+						<div class="top_gz_l">
+							<a href="" class="top_wx_a"><img src="images/qrcode_app.jpg" alt="" class="top_wx"></a>
+							<em>米折微信公众号<br>
+							mizhewang</em>
+						</div>
+						<div class="top_gz_r">
+							<a href=""><img src="images/weibo_icon.png" alt="" class="top_gz_wb"></a>
+							<em>官方微博</em>
+							<a href=""><img src="images/qqzone.png" alt=""></a>
+							<em>QQ空间</em>
+						</div>
+					</div>
+					</li>
+					<div></div>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<!-- logo开始 -->
+	<div id="logo">
+		<div class="logo_con clear_fix">
+			<div class="logo_l">
+				<a href="index.html">
+					<img src="images/new-logo.jpg" >
+				</a>
+			</div>
+			<div class="logo_r">
+				<img src="images/logo2.png" >
+			</div>
+			
+		</div>
+	</div>
+		
+	<!-- nav开始 -->
+	<div id="nav" class="clear_fix">
+		<div class="nav_con">
+			<ul class="nav_ul">
+				<li><a href="index.html" class="nav_select">首页</a></li>
+				<li><a href="">品牌特卖</a></li>
+				<li><a href="">限量购</a></li>
+				<li><a href="">手机客户端</a></li>
+				<li><a href="">贝贝网</a></li>
+				<li><a href="">育儿宝</a></li>
+			</ul>
+			<a href="#" class="nav_sj">商家中心</a>
+		</div>
+	</div>
+	
+		
+	<div id="box">
+		
+		<div class="side_con">
+					<div class="side_top1">
+						<img src="images/site_top0526.jpg" alt="" />
+					</div>
+					<div class="side_top">每日九点更新</div>
+					<ul class="side_ul">
+						<li><a href="index.html" >全部</a></li>
+						<li><a href="list.html" id="xuanzhong">女装</a></li>
+						<li><a href="">居家</a></li>
+						<li><a href="">母婴</a></li>
+						<li><a href="">鞋包</a></li>
+						<li><a href="">配饰</a></li>
+						<li><a href="">美妆</a></li>
+						<li><a href="">热卖</a></li>
+					</ul>
+					<ul class="side_hd clear_fix" >
+						<li><a href="">10元购</a></li>
+						<li><a href="">品牌特卖</a></li>
+						<li><a href="">限量购</a></li>
+						<li><a href="">9.9包邮</a></li>
+					</ul>
+					<div class="side_hb">
+						APP送红包
+						<a href="">
+							<div class="side_app">
+								<p>安装APP<em>送红包</em></p>
+								<img src="images/qrcode_down.jpg"/>
+							</div>
+						</a>
+					</div>
+				</div>
+		
+		
+		<!--goods开始-->
+		<div class="goods_con">
+			<div class="goods_top">
+				<span class="goods_top_l">
+					今日特卖
+					<span>/</span>
+				</span>
+				<span class="goods_sy">本场剩余:</span>
+				<p style="display: none;" >发布时间为<span id="atime01">9:00</span></p>
+				<span id="timeOver01">00:00:00</span>
+			</div>
+			<div class="goods_sp">
+				<ul class="goods_nav">
+					<li><a href="index.html">全部</a></li>
+					<li><a href="list.html" >女装</a></li>
+					<li><a href="">居家</a></li>
+					<li><a href="">母婴</a></li>
+					<li><a href="">鞋包</a></li>
+					<li><a href="">配饰</a></li>
+					<li><a href="">美妆</a></li>
+					<li><a href="">热卖排行</a></li>
+					<li><a href="" class="goods_bh">9.9包邮 </a></li>
+					<li><a href="" class="goods_bh">明日精选</a></li>
+				</ul>
+				<div class="goods_hdt">
+					<div class="goods_hk">
+						
+					</div>
+				</div>
+				<div class="goods_fl">
+					<ul>
+						<li><a href="">上衣</a></li>
+						<li><a href="">裙装</a></li>
+						<li><a href="">裤子</a></li>
+						<li><a href="">套装</a></li>
+						<li><a href="">中老年年</a></li>
+						<li><a href="">内衣</a></li>
+					</ul>
+					
+				</div>
+				<div class="goods_show">
+					<!--<div class="goods_item">
+						<a href="">
+							<dl>
+								<dt>
+									<img src="images/q1.jpg"/>
+									<div class="goods_zz">
+										健美创研 经典女士淡香水4件套
+									</div>
+								</dt>
+								<dd>
+									<span class="goods_money"><span class="goods_min">￥</span>19<span class="goods_cen">00</span></span>
+									<div class="goods_dz">
+										<span class="goods_dz_t">0.7折</span>
+										<span class="goods_jg">￥238</span>
+									</div>
+									<span class="goods_qgrs">33066人已开抢</span>
+									<span class="goods_qqg">去抢购</span>
+								</dd>
+							</dl>
+						</a>
+					</div>-->
+					
+					
+					
+					
+					
+					
+					
+				</div>	
+			</div>
+		</div>
+	</div>	
+		
+	
+	<!--footer开始-->
+	<div id="footer">
+		<div class="footer_con clear_fix">
+			<ul class="footer_ul clear_fix">
+				<li><a href="">首页</a></li>
+				<li><a href="">关于米折</a></li>
+				<li><a href="">媒体报道</a></li>
+				<li><a href="">人才招聘</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">友情链接</a></li>
+				<li><a href="">商务合作</a></li>
+				<li><a href="">帮助中心</a></li>
+				<li><a href="">联系客服</a></li>
+				<li><a href="">手机客户端</a></li>
+				<li><a href="">网站地图</a></li>
+			</ul>
+			<div class="footer_hj clear_fix">
+			<a href=""><img src="images/j1.png"/></a>
+			<a href=""><img src="images/j2.png"/></a>
+			<a href=""><img src="images/j3.png"/></a>
+			<a href=""><img src="images/j4.png"/></a>
+			<a href=""><img src="images/j5.png"/></a>
+			</div>
+			
+			<p class="footer_dl">© 2011-2018 米折网 - 杭州互秀电子商务有限公司 旗下网站 - 浙ICP备12005806</p>
+			<div class="fooer_fx">
+				<span class="fooer_fx_more">分享米折网到：</span>
+				<a href="" title="分享到QQ好友" class="fx_qq"></a>
+				<a href="" title="分享到QQ空间" class="fx_qzone"></a>
+				<a href="" title="分享到新浪微博" class="fx_xlwb"></a>
+				<a href="" title="分享到腾讯微博" class="fx_txwb"></a>
+				<a href="" title="分享到人人网" class="fx_rrw"></a>
+				<a href="" title="分享到我的淘宝" class="fx_tb"></a>
+			</div>
+		</div>
+	
+	
+	</div>
+	<!--返回最上面-->
+	<div class="fhtop">
+		
+	</div>
+	
+
+</body>
+</html>
+<script type="text/javascript">
+	point_item();
+function point_item(){
+	$(".goods_item").on({
+		mouseover : function(){
+			$(this).find(".goods_qgrs").hide();
+			$(this).find(".goods_qqg").css("display","inline-block");
+			$(this).find(".goods_zz").css("display","block");
+			$(this).find("img").css("opacity",0.7);
+		},
+		mouseout : function(){
+			$(this).find(".goods_qgrs").show();
+			$(this).find(".goods_qqg").css("display","none");
+			$(this).find(".goods_zz").css("display","none");
+			$(this).find("img").css("opacity",1);
+			
+		}
+	})	
+}	
+	$(document).scroll(function(){
+	if($(document).outerHeight(true) < 10000){
+		if(($(document.body).height() + $(document).scrollTop()) >= ($(document).outerHeight(true) * 0.95)){
+//		console.log($(document.body).height() + $(document).scrollTop());
+//		console.log($(document).outerHeight(true) * 0.9)
+		load();
+		point_item();
+//		new Promise(function(resolve,reject){
+//			load();
+//			resolve();
+//		}).then(function(){
+//			point_item();
+//		})
+		
+	}
+	}
+	
+
+})
+</script>
+
