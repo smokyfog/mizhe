@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>米折-登录</title>
+    <title>米折-详情</title>
+    <!--<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>-->
     <link rel="stylesheet" href="css/public.min.css">
     <link rel="stylesheet" type="text/css" href="css/details.min.css"/>
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
 	<script src="js/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="js/djs.js"></script>
-	<script src="js/index.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fly.js" ></script>
+	<script type="text/javascript" src="js/requestAnimationFrame.js" ></script>
+	<!--<script type="text/javascript" src="js/djs.js"></script>-->
+	<!--<script src="js/index.min.js"></script>-->
+	<script type="text/javascript" src="js/details.min.js"></script>
 	
 </head>
 <body>
@@ -122,26 +127,574 @@
 		<p><a href="">首页></a><a href="">限量购></a><a href="">蒂唯俪 碎花雪纺衫女长袖2018秋装新款超仙遮肚子衬衫甜美小清新上衣潮</a></p>
 	</div>
 	<div id="box">
-		<div class="detail_mete">
-			<div class="detail_mete_left">
+		<div class="detail_mete clear_fix">
+			<div class="detail_mete_left clear_fix">
 				<div class="mete_top">
-					<img src="images/mk.jpg" alt="" class="mete_mt"/>
+					<div class="img_mask"></div>
+					<div class="float_layer"></div>
+					<img src="images/mk.jpg"  alt="" class="mete_mt mete_mt1 img1" />
+					<img src="images/lsbig.jpg"  alt="" class="mete_mt mete_mt2 img2" style="display: none;"/>
+					
+				</div>
+				<div class="big_box">
+					<img src="images/mk.jpg" class="big_img big_img1 img1" />
+					<img src="images/lsbig.jpg"  class="big_img big_img2 img2" style="display: none;" />
 				</div>
 				<div class="mete_bottom">
-					<ul>
-						<li><a href=""><img src=""/></a></li>
-					</ul>
+					<div class="mete_bottom_k">
+						<ul>
+							<li class="active" id="img1"><a ><img src="images/mkmin.jpg"/></a></li>
+							<li class="" id="img2"><a ><img src="images/lsmin.jpg"/></a></li>
+						</ul>
+					</div>	
 				</div>
 			</div>
-			<div class="detail_mete_right">
+			<script type="text/javascript">
+				$(".mete_bottom_k  li").each(function(index,value){
+								$(value).click(function(){
+									$(".mete_top  img").each(function(index,value){
+									$(value).hide();
+									$(value).hide();
+									})
+									$(".big_box  img").each(function(index,value){
+									$(value).hide();
+									$(value).hide();
+									})
+									$(this).addClass("active").siblings().removeClass("active");
+									var id = "." + $(this).attr("id");
+									$(id).show();
+								})
+				})
+			</script>
+			<div class="detail_mete_right clear_fix">
+				<h1 class="main_title"><em>今日特卖</em>蒂唯俪 碎花雪纺衫女长袖2018秋装新款超仙遮肚子衬衫甜美小清新上衣潮</h1>
+				<p class="sub_title">碎花雪纺衫女长袖2018秋装新款超仙遮肚子衬衫甜美小清新上衣潮</p>
+				<div class="price_info">
+					<div class="now_price">
+						<em>￥</em><i>56.00</i>
+					</div>
+					<div class="old_price_box">
+						<span class="ckj">参考价</span>
+						<span class="old_price">139.00</p>
+					</div>
+					<div class="zk_box">
+						<p class="zk">折扣</p>
+						<p class="zkj">4折</p>
+					</div>
+					<div class="save_money_box">
+						<span class="jsl">您节省了</span>
+						<span class="save_money">83.00</span>
+					</div>
+				</div>
+				<div class="sale_box">
+					<div class="freight_box">
+						<em>运费</em><span class="freight">包邮（偏远地区除外）</span>
+					</div>
+					<div class="select_box">
+						<div class="select_color">
+							<em for="">颜色</em>
+							<ul class="select_img">
+								<li price = "56.00" link = "img1" class="colorSelect">
+									<input type="hidden" name="" id="" value="碎花衬衫" />
+									<a href="javascript:;">
+										<div class="img_min">
+											<img src="images/mkmin.jpg" alt="" />
+										</div>
+										<span>花色</span>
+										<div class="current_box"></div>
+										<i class="iconfont1">✔</i>
+									</a>
+								</li>
+								<li price = "69.00" link = "img2">
+									<input type="hidden" name="" id="" value="韩范衬衫" />
+									<a href="javascript:;">
+										<div class="img_min">
+											<img src="images/lsmin.jpg" alt="" />
+										</div>
+										<span>蓝色</span>
+										<div class="current_box"></div>
+										<i class="iconfont1">✔</i>
+									</a>
+								</li>
+								
+							</ul>
+							
+						<script type="text/javascript">
+							
+							$(".select_img  li").each(function(index,value){
+								
+								$(value).click(function(){
+									if($(value).find("a").attr("class") != "point"){
+										$(".select_img  li").each(function(index,value){
+										$(value).find(".current_box").css("display","none");
+										$(value).find(".iconfont1").css("display","none");
+									})
+									var price = $(this).attr("price");
+									$(".now_price i").html(price);
+									var img  = $(this).attr("link");
+									$(".mete_top  img").each(function(index,value){
+									$(value).hide();
+									$(value).hide();
+									})
+									$(".big_box  img").each(function(index,value){
+									$(value).hide();
+									$(value).hide();
+									})
+									$("#"+img).addClass("active").siblings().removeClass("active");
+									$("."+img).show();
+									$(this).find(".current_box").css("display","inline-block");
+									$(this).find(".iconfont1").css("display","inline-block");
+									$(this).find("a").addClass("point").parent().siblings().find("a").removeClass("point");
+									$(this).addClass("colorSelect").siblings().removeClass("colorSelect");
+									}else{
+										$(value).find(".current_box").css("display","none");
+										$(value).find(".iconfont1").css("display","none");
+										$(this).find("a").removeClass("point")
+									}
+									
+								})
+							})
+						</script>						
+						</div>
+						
+						<div class="select_size">
+							<em>尺码</em>
+							<ul class="size_ul">
+								<li class="sizeSelect">
+									<a href="javascript:;" class="">
+										<div class="size_min">
+										</div>
+										<span>S</span>
+										<div class="current_box"></div>
+										<i class="iconfont1">✔</i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="">
+										<div class="size_min">
+										</div>
+										<span>M</span>
+										<div class="current_box"></div>
+										<i class="iconfont1">✔</i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="">
+										<div class="size_min">
+										</div>
+										<span>L</span>
+										<div class="current_box"></div>
+										<i class="iconfont1">✔</i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="">
+										<div class="size_min">
+										</div>
+										<span>XL</span>
+										<div class="current_box"></div>
+										<i class="iconfont1">✔</i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="">
+										<div class="size_min">
+										</div>
+										<span>XXL</span>
+										<div class="current_box"></div>
+										<i class="iconfont1">✔</i>
+									</a>
+								</li>
+								
+							</ul>
+							<script type="text/javascript">
+							
+							$(".size_ul  li").each(function(index,value){
+								
+								$(value).click(function(){
+									if($(value).find("a").attr("class") != "point"){
+										$(".size_ul  li").each(function(index,value){
+										$(value).find(".current_box").hide();
+										$(value).find(".iconfont1").hide();
+									})
+									$(this).find(".current_box").show();
+									$(this).find(".iconfont1").show();
+									$(this).find("a").addClass("point").parent().siblings().find("a").removeClass("point");
+									$(this).addClass("sizeSelect").siblings().removeClass("sizeSelect");
+									}else{
+										$(value).find(".current_box").hide();
+										$(value).find(".iconfont1").hide();
+										$(this).find("a").removeClass("point")
+									}
+									
+								})
+							})
+						</script>	
+						</div>
+				
+					</div>
+					<div class="buy_num clear_fix">
+						<em>数量</em>
+						<div class="set_num">
+							<a href="javasceipt:;" class="del_num num_op"><i class="">-</i></a>
+							<input type="text" class="num_box" id="num_box" value="1" />
+							<a href="javasceipt:;" class="add_num num_op"><i class="">+</i></a>
+						</div>件
+						<span class="xg">每人限购五件</span>
+					</div>
+					<div class="btn_box">
+						<a href="javascript:;" class="buy_btn">
+							立即抢购
+						</a>
+					</div>
+					<div class="time_box">
+						<div class="time_box_top">
+							<span class="sur"><i></i><b>还剩</b></span>
+							
+							<div class="data_time" id="data_time">
+								<i class="d">2</i>
+								<s>天</s>
+								<i class="h">10</i>
+								<s>时</s>
+								<i class="m">01</i>
+								<s>分</s>
+								<i class="s miao">14.6</i>
+								<s class="">秒</s>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						
+						
+				        setInterval(function() {
+				        	var date =  new Date();
+							var date1 = new Date(2018,8,6);
+				        	date2 = date1 - date;
+				            var day = 0,
+				                hour = 0,
+				                minute = 0,
+				                second = 0; //时间默认值     
+				            if (date2 > 0) {
+				                hm = (date2)%1000;
+								second = parseInt((date2)/1000%60);
+								minute = parseInt((date2)/1000/60%60);
+								hour = parseInt((date2)/1000/60/60%24);
+								day = parseInt((date2)/1000/60/60/24)
+				            }
+				            if (minute <= 9) minute = '0' + minute;
+				            if (second <= 9) second = '0' + second;
+				            $('.d').html(day);
+				            $('.h').html(hour);
+				            $('.m').html(minute);
+				            $('.s').html(second);
+				            $('.s').append("."+hm);
+//				            console.log(111)
+				        }, 1);
+					</script>
+			</div>
+		</div>
+	</div>	
+		<div class="detail_main clear_fix">
+			<div class="detail_left clear_fix">
+				<div class="detail_nav clear_fix">
+					<ul class="detail_ul">
+						<li class="nav_checked">
+							<i class="iconfont icon-tupian "></i>
+							<a href="">商品详情</a>
+						</li>
+						<li>
+							<i class="iconfont icon-zan "></i>
+							<a href="">卖家口碑（<span>1</span>）</a>
+						</li>
+						<li>
+							<i class="iconfont icon-dianhua "></i>
+							<a href="">商品资讯</a>
+						</li>
+						<li>
+							<i class="iconfont icon-huangguan "></i>
+							<a href="">米折优势</a>
+						</li>
+					</ul>
+				</div>
+				<h1 class="desc_title">商品参数</h1>
+				<div class="item-info-table">
+					<table>
+					<tr>
+					<th>材质</th>
+					<td>聚酯纤维</td>
+					</tr>
+					<tr>
+					<th>品牌</th>
+					<td>芊艺</td>
+					</tr>
+					<tr>
+					<th>货号</th>
+					<td>8153</td>
+					</tr>
+					<tr>
+					<th>女装风格</th>
+					<td>甜美</td>
+					</tr>
+					<tr>
+					<th>领型</th>
+					<td>V字领</td>
+					</tr>
+					<tr>
+					<th>衣门襟</th>
+					<td>套头</td>
+					</tr>
+					<tr>
+					<th>适用性别</th>
+					<td>女</td>
+					</tr>
+					<tr>
+					<th>衣长</th>
+					<td>常规</td>
+					</tr>
+					<tr>
+					<th>适用年龄</th>
+					<td>18-24周岁,25-29周岁</td>
+					</tr>
+					<tr>
+					<th>袖型</th>
+					<td>灯笼袖</td>
+					</tr>
+					<tr>
+					<th>适用季节</th>
+					<td>春秋</td>
+					</tr>
+					<tr>
+					<th>厚薄</th>
+					<td>常规</td>
+					</tr>
+					<tr>
+					<th>版型</th>
+					<td>宽松</td>
+					</tr>
+					<tr>
+					<th>流行元素</th>
+					<td>印花</td>
+					</tr>
+					<tr>
+					<th>袖长</th>
+					<td>九分袖</td>
+					</tr>
+					<tr>
+					<th>上市时间</th>
+					<td>2018年秋季</td>
+					</tr>
+					<tr>
+					<th>默认快递</th>
+					<td>申通</td>
+					</tr>
+					<tr>
+					<th>服务信息</th>
+					<td>由品牌商从广东广州发货</td>
+					</tr>
+					</table>
+					</div>
+				<h1 class="desc_title">商品尺码</h1>
+				<div class="m-size-detail-tab">
+					<h3 hidden="">商品尺码</h3>
+					<p class="m-size-tip">TIPS:</p> 
+					<p class="m-size-tip">1.请综合参考尺码表各项参数进行选购，以帮助您选择到更合适的尺码。</p>
+					<p class="m-size-tip">2.米折 “7天无理由退货” 为您的购物做保障，请放心挑选尺码。</p>
+					<div class="w-item-size">
+						<div class="w-item-size-tab">
+							<div class="w-item-size-thead">
+								<span class="w-item-size-title">尺码对照表</span>
+								<span class="w-item-size-unit">单位：CM</span>
+							</div>
+							<div class="w-item-size-tbody">
+								<table id="itemSizeTable">
+									<thead>
+										<tr>
+											<td>尺码</td>
+											<td>衣长</td>
+											<td>胸围</td>
+											<td>建议身高</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>S</td>
+											<td>61</td>
+											<td>91</td>
+											<td>150-155</td>
+										</tr>
+										<tr>
+											<td>M</td>
+											<td>62</td>
+											<td>95</td>
+											<td>155-160</td>
+										</tr>
+										<tr>
+											<td>L</td>
+											<td>63</td>
+											<td>99</td>
+											<td>160-165</td>
+										</tr>
+										<tr>
+											<td>XL</td>
+											<td>64</td>
+											<td>103</td>
+											<td>165-170</td>
+										</tr>
+										<tr>
+											<td>XXL</td>
+											<td>65</td>
+											<td>107</td>
+											<td>170-175</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--<div class="w-item-size-close iconfont"></div>-->
+					</div>
+				</div>
+				<h1 class="desc_title">商品详情</h1>
+				<div class="item_img">
+					<div class="detail">
+						<p>
+							<img src="images/m1.jpg"/>
+						</p>
+					</div>
+				</div>
+				<h2 class="koubei">
+					<i class="iconfont icon-zan"></i>
+					买家口碑
+				</h2>
+				<div class="comment">
+					<div class="comment_header clear_fix">
+						<div class="rate_score_left" date = "4.2">
+							<div>商品满意度</div>
+							<string>4.2</string>
+							<div class="good">
+								<i class="iconfont icon-pingfen11"></i>
+								<i class="iconfont icon-pingfen11"></i>
+								<i class="iconfont icon-pingfen11"></i>
+								<i class="iconfont icon-pingfen11"></i>
+							</div>
+							<div class="bad">
+								<i class="iconfont icon-pingfenshoucang-"></i>
+							</div>
+							
+						</div>
+						<div class="rate_score_right">
+							<div class="rate_scroller">
+								<div class="rate_score_num">4.2</div>
+								<div class="scroller_bg"></div>
+								<div class="scroller">
+									<div class="rate_score_0"></div>
+									<div class="rate_score_1"></div>
+									<div class="rate_score_2"></div>
+									<div class="rate_score_3"></div>
+									<div class="rate_score_4"></div>
+								</div>
+								<div class="scroller1">
+									<div class="rate_score_0">很不满意</div>
+									<div class="rate_score_1">不满意</div>
+									<div class="rate_score_2">一般</div>
+									<div class="rate_score_3">满意</div>
+									<div class="rate_score_4">很满意</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="comment_botton">
+						<div class="comment_filter">
+							<span>
+								<input type="radio" name="comment_type" id="comment_all" value="" />
+								<label for="comment_all" id="comment_all">全部（1）</label>
+							</span>
+							<span>
+								<input type="radio" name="comment_type" id="comment_pic" value="" />
+								<label for="comment_pic" id="comment_pic">晒图（0）</label>
+							</span>
+						</div>
+						<div class="comment_box">
+							<div class="comment_index clear_fix">
+								<span class="comment_body">
+									质量很好
+								</span>
+								<span class="comment_item_info">
+									<div class="">颜色：蓝色</div>
+									<div class="">尺码：XL</div>
+								</span>
+								<span class="comment_author">
+									<div class="author_name">188***8</div>
+									<div class="author_score">
+										<div class="good">
+											<i class="iconfont icon-pingfen11"></i>
+											<i class="iconfont icon-pingfen11"></i>
+											<i class="iconfont icon-pingfen11"></i>
+											<i class="iconfont icon-pingfen11"></i>
+										</div>
+										<div class="bad">
+											<i class="iconfont icon-pingfenshoucang-"></i>
+										</div>
+									</div>
+								</span>
+							</div>
+						</div>
+						<div class="pagination">
+							
+						</div>
+					</div>
+					
+				</div>
+				<h2 class="zixun koubei">
+					<i class="iconfont icon-huangguan"></i>
+				商品咨询
+				</h2>
+				<div class="part_box">
+					<a href=""><img src="images/zixun.png"/></a>
+				</div>
+				<h2 class="zixun koubei">
+					<i class="iconfont icon-huangguan"></i>
+				米折优势
+				</h2>
+				<div class="part_box">
+					<a href=""><img src="images/ys.jpg"/></a>
+				</div>
+			</div>
+			<div class="detail_right ">
+				<div class="detail_right_top">
+					热卖推荐
+				</div>
+				<div class="detail_right_box">
+					<div class="detail_right_item">
+						<a href="">
+							<img src="images/r1.jpg"/>
+						</a>
+						<div class="right_item_info">
+							<div class="right_item_title">
+								沫町唂 【两件装】2018夏季新款纯色竹节棉短袖打底衫短袖大码宽松T恤圆领上衣
+							</div>
+							<span class="right_item_price">
+								<span class="right_item_min">￥</span>48.00
+							</span>
+						</div>
+					</div>
+					<div class="detail_right_item">
+						<a href="">
+							<img src="images/r1.jpg"/>
+						</a>
+						<div class="right_item_info">
+							<div class="right_item_title">
+								沫町唂 【两件装】2018夏季新款纯色竹节棉短袖打底衫短袖大码宽松T恤圆领上衣
+							</div>
+							<span class="right_item_price">
+								<span class="right_item_min">￥</span>48.00
+							</span>
+						</div>
+					</div>
+				</div>
 				
 			</div>
-			
 		</div>
-		
-		
-	</div>	
-</div>			
+	</div>			
 	
 	
 	
@@ -185,13 +738,48 @@
 	
 	</div>
 	<!--返回最上面-->
-	<div class="fhtop">
-		
-	</div>
+
 	
 		
 		
 	</body>
+	
+	<!--aside开始-->
+	<div id="aside">
+		<ul class="clear_fix aside_ul">
+			<li>
+				<a href="cart.html" class="iconfont icon-gouwuchekong aside_shopping">
+					<!--<div class="cart_box">
+						<div class="cart_top">
+							<span class="iconfont "></span>
+							<span class="cart_title" >购物车</span>
+						</div>
+						<ul class="cart_item">
+							
+						</ul>
+						<div class="cart_bottom_box">
+							<div class="cart_bottom">
+								<span class="cart_text">小计</span>
+								<span class="cart_money">￥0.00</span>
+							</div>
+							<a href="cart_link_btn">去结算</a>
+						</div>
+					</div>-->
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="iconfont icon-shouji aside_app">
+					<div class="app_box">
+						<p>下载手机APP</p>
+						<p>随时随地看上新</p>
+						<img src="images/qrcode_down.jpg" alt="" />
+					</div>
+				</a>
+			</li>
+			<li class="kefu_talk"><a href="javascript:;" class="iconfont icon-kefu1 aside_kefu"></a></li>
+			<li><a href="javascript:;" class="iconfont icon-fold aside_go_top"></a></li>
+		</ul>
+	</div>
 	
 
 </body>

@@ -3,7 +3,7 @@ function load(){
 					for(var i = 0,len = arr.length;i < len;i ++){
 						$('.goods_show').append(`
 							<div class="goods_item">
-								<a href="">
+								<a href="${arr[0].link}">
 									<dl>
 										<dt>
 											<img src="${arr[i].src}" alt="${arr[i].alt}"/>
@@ -37,7 +37,7 @@ $.getJSON('json/nvzhuang.json',function(arr){
 					for(var i = 0,len = arr.length;i < len;i ++){
 						$('.goods_show').append(`
 							<div class="goods_item">
-								<a href="">
+								<a href="${arr[0].link}">
 									<dl>
 										<dt>
 											<img src="${arr[i].src}" alt="${arr[i].alt}"/>
